@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  margin: 0;
+  font-family: "Exo 2", serif;
+}
+.nav{
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #5563FF;
+  position: fixed;
+  color: #fff;
+}
+.box{
+  height: auto;
+  width: 100%;
+  border: 1px solid #4680ff;
+  padding: 5px;
+  border-radius: 7px;
+}
