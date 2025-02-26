@@ -18,3 +18,19 @@ body{
   padding: 5px;
   border-radius: 7px;
 }
+select,input{
+    font-family: "Exo 2", serif;
+}
+.input{
+  height: auto;
+  width: 250px;
+  margin: 10px;
+  border: 2px dotted #000;
+  outline: none;
+}
+.input:focus{
+  border: 2px dashed #000;
+}
+.pd{
+  padding: 10px;
+}
