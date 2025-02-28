@@ -2,76 +2,114 @@
 <html>
 
 <head>
-  
-  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HbA1c App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HbA1c & Health Metrics</title>
 </head>
 
 <body>
-  <div class="nav">
-    <blockquote>
-      <h3>HbA1c Tester</h3>
-    </blockquote>
-  </div>
-  
-  <br /> <br /><br />
-  <blockquote>
-    <div class="box">
-      <label class="pd" for="">Glucose Measurement </label><br />
-      <select class="pd input" class="input" id="step1">
-        <option>mg/dL</option>
-        <option>mmol/L</option>
-      </select><br />
-      <label class="pd" for="">value</label><br />
-      <input class="pd input" type="number" placeholder="Input Value" id="step2"/>
-      <center>
-        <button onclick="tester()" class="btn">ok</button>
-      </center>
+    <div class="nav">
+        <blockquote>
+            <h3>HbA1c & Health Metrics Tester</h3>
+        </blockquote>
     </div>
+
+    <br /><br /><br />
+    <blockquote>
+        <div class="box">
+            <label class="pd" for="">Glucose Measurement </label><br />
+            <select class="pd input" id="step1">
+                <option>mg/dL</option>
+                <option>mmol/L</option>
+            </select><br />
+            <label class="pd" for="">Value</label><br />
+            <input class="pd input" type="number" placeholder="Input Value" id="step2"/>
+            <center>
+                <button onclick="tester()" class="btn">OK</button>
+            </center>
+        </div>
+    </blockquote>
     
-  </blockquote>
+    
+<div class="vcc" id="vcc">
+    
+        <div class="box" id="capture">
+            <center>
+                <h2>Reports <hr /> </h2>
+            </center>
+            <blockquote>
+              <b>RP ID : <span id="invid"></span></b>
+              <br />
+              RP Date : <span id="sDate"></span>
+            </blockquote>
+            <main class="scroll">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Measurement</th>
+                            <th>mg/dL</th>
+                            <th>mmol/L / µmol/L</th>
+                            <th>Explanation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Blood Glucose</th>
+                            <td id="mgdl"></td>
+                            <td id="mmoll"></td>
+                            <td>Blood sugar level</td>
+                        </tr>
+                        <tr>
+                            <th>HbA1c</th>
+                            <td colspan="2" id="hba1c"></td>
+                            <td>Average blood sugar (3 months)</td>
+                        </tr>
+                        <tr>
+                            <th>Creatinine</th>
+                            <td id="creatinine_mgdl"></td>
+                            <td id="creatinine_umoll"></td>
+                            <td>Kidney function</td>
+                        </tr>
+                        <tr>
+                            <th>BUN</th>
+                            <td id="bun_mgdl"></td>
+                            <td id="bun_mmoll"></td>
+                            <td>Blood Urea Nitrogen</td>
+                        </tr>
+                        <tr>
+                            <th>LDL (Bad Cholesterol)</th>
+                            <td id="ldl_mgdl"></td>
+                            <td id="ldl_mmoll"></td>
+                            <td>Low-density lipoprotein</td>
+                        </tr>
+                        <tr>
+                            <th>Triglycerides</th>
+                            <td id="triglycerides_mgdl"></td>
+                            <td id="triglycerides_mmoll"></td>
+                            <td>Fat levels in blood</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+          <small>  Programed By Nahid TDx
+          </small>
+        </div>
+        <blockquote>
+          <center>
+  <button class="btn" onclick="downloadImage()">Download Image</button>
+</center>
+        </blockquote>
+   
+
+
   
-  
- <blockquote>
-   <div class="box">
-     <center>
-       <h2>Reports </h2>
-     </center>
-    <table class="" border="0">
-      <thead>
-        <tr>
-          <th>Measurement
-          </th>
-          <th>Value</th>
-          <th> Explanation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>mmol/L</th>
-          <th><span id="mmoll"></span>  mmol/L</th>
-          <th>No Data</th>
-        </tr>
-        <tr>
-         <th>mg/dL</th>
-         <th><span id="mgdl"></span></th>
-         <th>No data</th>
-        </tr>
-        <tr>
-          <th>HbA1c</th>
-          <th>0</th>
-          <th>No Data</th>
-        </tr>
-      </tbody>
-      
-    </table>
-   </div>
- </blockquote>
-  
-  <script src="script.js"></script>
-  
+</div>
+
+
+
+<script src="script.js"></script>
 </body>
 
 </html>

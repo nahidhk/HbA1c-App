@@ -1,50 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&display=swap');
+
+body {
   margin: 0;
-  font-family: "Exo 2", serif;
+  font-family: "Exo 2", sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
 }
-.nav{
-  top: 0;
-  height: 60px;
-  width: 100%;
-  background-color: #5563FF;
+
+/* Navigation Bar */
+.nav {
   position: fixed;
-  color: #fff;
-}
-.box{
-  height: auto;
+  top: 0;
   width: 100%;
+  height: 60px;
+  background: linear-gradient(45deg, #5563FF, #4680ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Boxes */
+.box {
+  background: white;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 15px;
   border: 1px solid #4680ff;
-  padding: 5px;
-  border-radius: 7px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-select,input{
-    font-family: "Exo 2", serif;
-}
-.input{
-  height: auto;
-  width: 250px;
-  margin: 10px;
-  border: 2px dotted #000;
-  outline: none;
-}
-.input:focus{
-  border: 2px dashed #000;
-}
-.pd{
+
+/* Input Fields */
+select, input {
+  font-family: "Exo 2", sans-serif;
+  width: 90%;
   padding: 10px;
-}
-.btn{
-  height: 35px;
-  width: 100px;
-  cursor: pointer;
-  background-color: #4680ff;
-  border: 1px solid #fff;
-  color: #fff;
+  margin-top: 8px;
+  border: 2px solid #4680ff;
   border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
 }
-table, tr,th,td{
+
+input:focus, select:focus {
+  border: 2px solid #5563FF;
+  box-shadow: 0 0 5px rgba(85, 99, 255, 0.5);
+}
+
+/* Button */
+.btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #4680ff, #5563FF);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #5563FF, #4680ff);
+  box-shadow: 0 3px 8px rgba(70, 128, 255, 0.5);
+}
+
+/* Table */
+table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px dashed #C4C4C4;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+th {
+  background: #4680ff;
+  color: white;
+}
+
+td {
+  background: #f9f9f9;
+}
+
+/* Scrollable Table */
+.scroll {
+  
+  overflow-y: auto;
+}
+.vcc{
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .box {
+    width: 90%;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    height: 35px;
+    font-size: 14px;
+  }
 }
