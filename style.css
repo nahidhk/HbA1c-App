@@ -43,8 +43,8 @@ select,input{
   color: #fff;
   border-radius: 6px;
 }
-table,tr,th,td{
+table, tr,th,td{
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #444444;
+  border: 1px dashed #C4C4C4;
 }
