@@ -20,14 +20,14 @@
   <blockquote>
     <div class="box">
       <label class="pd" for="">Glucose Measurement </label><br />
-      <select class="pd input" class="input" id="">
+      <select class="pd input" class="input" id="step1">
         <option>mg/dL</option>
         <option>mmol/L</option>
       </select><br />
       <label class="pd" for="">value</label><br />
-      <input class="pd input" type="number" placeholder="Input Value" />
+      <input class="pd input" type="number" placeholder="Input Value" id="step2"/>
       <center>
-        <button class="btn">ok</button>
+        <button onclick="tester()" class="btn">ok</button>
       </center>
     </div>
     
@@ -48,12 +48,12 @@
       <tbody>
         <tr>
           <th>mmol/L</th>
-          <th>0</th>
+          <th><span id="mmoll"></span>  mmol/L</th>
           <th>No Data</th>
         </tr>
         <tr>
          <th>mg/dL</th>
-         <th>0</th>
+         <th><span id="mgdl"></span></th>
          <th>No data</th>
         </tr>
         <tr>
@@ -67,7 +67,7 @@
    </div>
  </blockquote>
   
-  
+  <script src="script.js"></script>
   
 </body>
 
